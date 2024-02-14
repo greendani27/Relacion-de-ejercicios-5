@@ -595,6 +595,7 @@ MonoBehaviour:
   finalTime: 0
   endScreenTimer: 0
   explosion: {fileID: 0}
+  hudVidas: {fileID: 2135375930}
 --- !u!1 &1007696239
 GameObject:
   m_ObjectHideFlags: 0

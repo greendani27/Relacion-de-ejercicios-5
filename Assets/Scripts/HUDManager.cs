@@ -10,16 +10,6 @@ public class HUDManager : MonoBehaviour
     [SerializeField] public TMP_Text puntos;
     [SerializeField] private TMP_Text textTimer;
 
-    private void Start()
-    {
-        GameManager.Instance.HUD = this;
-        /*if (SceneManager.GetActiveScene().name.Equals("FinalScene")) {
-            Debug.Log(PlayerPrefs.GetInt("finalPoints"));
-            
-        }*/
-        
-    }
-
     public void MostrarPuntos(int enemys)
     {
         puntos.text = enemys.ToString();

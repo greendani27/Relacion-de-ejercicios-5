@@ -19,7 +19,6 @@ public class ControlEnemyA : MonoBehaviour
     private Vector3 originalPosition;
     private readonly float deltaY = 0.1f;
 
-    
 
     // Start is called before the first frame update
     void Start()

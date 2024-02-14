@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     public float endScreenTimer;
     [HideInInspector] public AudioSource explosion;
+    public GameObject hudVidas;
 
     void Awake()
     {
@@ -59,6 +60,8 @@ public class GameManager : MonoBehaviour
                 timer -= Time.deltaTime;
                 HUD.UpdateTimer();
             }
+            hudVidas.GetComponent<TMP_Text>().text = (vidas + 1).ToString();
+
         }
         if (SceneManager.GetActiveScene().name.Equals("FinalScene")) {
             endScreenTimer -= Time.deltaTime;
@@ -76,6 +79,7 @@ public class GameManager : MonoBehaviour
         {
             explosion = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
             contadorVidas = GameObject.FindGameObjectWithTag("Lifes").GetComponent<SpriteRenderer>();
+
         }
 
         if (SceneManager.GetActiveScene().name.Equals("FinalScene"))
